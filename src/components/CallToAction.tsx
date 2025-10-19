@@ -8,18 +8,33 @@ const CallToAction = () => {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    console.log("Submission handled")
     e.preventDefault();
     toast({
       title: "Thanks for your interest!",
       description: "We'll be in touch soon with upcoming opportunities.",
     });
+    try {
+      const sendResponse = await fetch("http://localhost:5000/email-submission", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email }),
+      })
+      if (!sendResponse.ok) {
+        console.error('Network response was not ok');
+      }
+      const data = await sendResponse.json();
+    } catch (error) {
+      console.error("Error submitting email:", error);
+    }
     setEmail("");
   };
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-card to-background relative overflow-hidden">
-      {/* Background Elements */}
+    <section id="call-to-action" className="py-24 px-6 bg-gradient-to-b from-card to-background relative overflow-hidden">
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
 

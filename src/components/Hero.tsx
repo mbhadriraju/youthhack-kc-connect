@@ -9,7 +9,6 @@ const Hero = () => {
       <div 
         className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -40,11 +39,23 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-            <Button variant="hero" size="lg" className="group">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="group"
+              onClick={() => {
+                document.getElementById('call-to-action')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Get Involved
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg">
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => {
+                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Learn More
             </Button>
           </div>
@@ -56,14 +67,14 @@ const Hero = () => {
                 <Users className="w-6 h-6" />
               </div>
               <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">500+</div>
-              <div className="text-muted-foreground">Students Reached</div>
+              <div className="text-muted-foreground">Students Expected to Reach</div>
             </div>
             <div className="space-y-2 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <div className="flex items-center justify-center gap-2 text-accent">
                 <Code2 className="w-6 h-6" />
               </div>
-              <div className="text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">15+</div>
-              <div className="text-muted-foreground">Events Hosted</div>
+              <div className="text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">5+</div>
+              <div className="text-muted-foreground">Events Planned for Year 1</div>
             </div>
             <div className="space-y-2 animate-slide-up" style={{ animationDelay: '0.6s' }}>
               <div className="flex items-center justify-center gap-2 text-primary-glow">

@@ -25,7 +25,7 @@ const values = [
 
 const About = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-background to-card">
+    <section id="about" className="py-24 px-6 bg-gradient-to-b from-background to-card">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
