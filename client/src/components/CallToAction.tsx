@@ -16,7 +16,7 @@ const CallToAction = () => {
       description: "We'll be in touch soon with upcoming opportunities.",
     });
     try {
-      const sendResponse = await fetch("http://localhost:5000/email-submission", {
+      const sendResponse = await fetch("/api/email-submission", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
