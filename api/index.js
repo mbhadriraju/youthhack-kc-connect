@@ -3,7 +3,6 @@ const app = express();
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config(); 
-const port = 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -43,10 +42,6 @@ app.post('/api/email-submission', async (req, res) => {
     console.error('Error sending email:', err);
     res.status(500).json({ error: 'Failed to send email' });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server listening at port ${port}`);
 });
 
 module.exports = app;
