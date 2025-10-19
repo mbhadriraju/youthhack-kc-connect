@@ -6,6 +6,9 @@
     "build": "cd client && npm install && npm run build && cd ../api && npm install",
     "vercel-build": "npm run build"
   },
+  "engines": {
+  "node": "20.x"
+  },
   "workspaces": [
     "client",
     "api"
