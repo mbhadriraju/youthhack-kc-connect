@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post('/email-submission', async (req, res) => {
+app.post('/api/email-submission', async (req, res) => {
   const { email } = req.body;
   console.log(`New submission: ${email}`);
 
@@ -44,3 +44,5 @@ app.post('/email-submission', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
+
+module.exports = app;
