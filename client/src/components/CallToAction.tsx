@@ -28,6 +28,7 @@ const CallToAction = () => {
         console.error('Network response was not ok');
       }
       const data = await sendResponse.json();
+      console.log(data);
     } catch (error) {
       console.error("Error submitting email:", error);
     }
