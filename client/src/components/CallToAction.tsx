@@ -24,6 +24,7 @@ const CallToAction = () => {
         body: JSON.stringify({ email: email }),
       })
       if (!sendResponse.ok) {
+        console.log(sendResponse);
         console.error('Network response was not ok');
       }
       const data = await sendResponse.json();
