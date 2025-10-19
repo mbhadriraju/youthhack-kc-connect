@@ -8,6 +8,10 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'A server error occurred' });
+});
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
