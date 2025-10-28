@@ -31,7 +31,7 @@ app.post('/api/email-submission', async (req, res) => {
   try {
     await transporter.sendMail({
       from: `${process.env.EMAIL_USER_1}`,
-      to: `${process.env.EMAIL_USER_1}, ${process.env.EMAIL_USER_2}`,
+      to: `${process.env.EMAIL_USER_1}, ${process.env.EMAIL_USER_2}, ${process.env.EMAIL_USER_3}`,
       subject: 'YouthHackKC Contact Submission',
       text: `A new user has submitted the email: ${email}. Please reach out.`,
     });
