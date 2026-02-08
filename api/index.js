@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const nodemailer = require('nodemailer');
-require('dotenv').config(); 
+require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
@@ -20,24 +20,34 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post('/api/email-submission', async (req, res) => {
-  const { email } = req.body;
-  console.log(`New submission: ${email}`);
+app.post('/api/contact', async (req, res) => {
+  const { name, email, phone, subject, message } = req.body;
+  console.log(`New contact submission from: ${email}`);
 
-  if (!email) {
-    return res.status(400).json({ error: 'Email required' });
+  if (!email || !message) {
+    return res.status(400).json({ error: 'Email and message are required' });
   }
 
   try {
-    await transporter.sendMail({
+    const mailOptions = {
       from: `${process.env.EMAIL_USER_1}`,
-      to: `${process.env.EMAIL_USER_1}, ${process.env.EMAIL_USER_2}, ${process.env.EMAIL_USER_3}`,
-      subject: 'YouthHackKC Contact Submission',
-      text: `A new user has submitted the email: ${email}. Please reach out.`,
-    });
+      to: `${process.env.EMAIL_USER_1}, ${process.env.EMAIL_USER_2}, ${email}`,
+      subject: `YouthHackKC Contact: ${subject || 'New Submission'}`,
+      text: `
+        Name: ${name || 'N/A'}
+        Email: ${email}
+        Phone: ${phone || 'N/A'}
+        Subject: ${subject || 'N/A'}
+        
+        Message:
+        ${message}
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
 
     console.log(`Email sent for: ${email}`);
-    res.json({ success: true });
+    res.status(200).json({ success: true });
   } catch (err) {
     console.error('Error sending email:', err);
     res.status(500).json({ error: 'Failed to send email' });

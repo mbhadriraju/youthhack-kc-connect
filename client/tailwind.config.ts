@@ -49,10 +49,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-accent': 'var(--gradient-accent)',
-        'gradient-hero': 'var(--gradient-hero)',
+      fontFamily: {
+        heading: ["Space Grotesk", "sans-serif"],
+        body: ["Outfit", "sans-serif"],
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',

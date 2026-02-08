@@ -28,15 +28,15 @@ const programs = [
 
 const Programs = () => {
   return (
-    <section className="py-24 px-6 bg-background relative overflow-hidden">
+    <section className="py-24 px-6 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Our <span className="bg-gradient-primary bg-clip-text text-transparent">Programs</span>
+          <h2 className="text-4xl md:text-5xl font-bold font-heading">
+            Our <span className="bg-primary bg-clip-text text-transparent">Programs</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Multiple ways to learn, grow, and connect with the tech community
@@ -47,17 +47,17 @@ const Programs = () => {
           {programs.map((program, index) => {
             const Icon = program.icon;
             return (
-              <Card 
+              <Card
                 key={program.title}
-                className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:scale-105 animate-slide-up"
+                className="bg-card/50 backdrop-blur-sm border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 animate-slide-up group"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <CardHeader>
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-${program.color === 'accent' ? 'accent' : 'primary'} flex items-center justify-center mb-4 shadow-glow`}>
+                  <div className={`w-12 h-12 rounded-lg bg-${program.color === 'accent' ? 'accent' : 'primary'} flex items-center justify-center mb-4 shadow-glow group-hover:scale-110 transition-transform`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle className="text-2xl">{program.title}</CardTitle>
-                  <CardDescription className="text-base">
+                  <CardTitle className="text-2xl font-heading">{program.title}</CardTitle>
+                  <CardDescription className="text-base font-body leading-relaxed">
                     {program.description}
                   </CardDescription>
                 </CardHeader>

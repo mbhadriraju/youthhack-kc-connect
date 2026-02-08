@@ -1,17 +1,13 @@
 import Hero from "@/components/Hero";
 import Programs from "@/components/Programs";
-import About from "@/components/About";
-import CallToAction from "@/components/CallToAction";
-import Footer from "@/components/Footer";
+import Sponsors from "@/components/Sponsors";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="space-y-20 pb-20">
       <Hero />
       <Programs />
-      <About />
-      <CallToAction />
-      <Footer />
+      <Sponsors />
     </div>
   );
 };
