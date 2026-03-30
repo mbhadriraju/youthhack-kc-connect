@@ -20,7 +20,7 @@ const programs = [
   {
     icon: Users,
     title: "Tutoring",
-    description: "One-on-one and small group tutoring sessions where students get personalized help with coding challenges and computer science concepts.",
+    description: "One-on-one and small group asynchronous tutoring sessions where students get personalized help with coding challenges and computer science concepts.",
     features: ["Personalized Learning", "Flexible Schedule", "Peer Mentorship"],
     color: "primary-glow",
   },

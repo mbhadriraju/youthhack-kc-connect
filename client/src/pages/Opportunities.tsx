@@ -98,7 +98,7 @@ const Opportunities = () => {
                         <CardHeader>
                             <CardTitle className="text-2xl font-heading">YouthHackKC X26</CardTitle>
                             <CardDescription className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" /> March/April 2026
+                                <Calendar className="w-4 h-4" /> May 2026
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="space-y-4 flex-grow">
@@ -138,18 +138,26 @@ const Opportunities = () => {
                     {/* Calendly Inline Widget */}
                     <div
                     className="calendly-inline-widget w-full rounded-xl border border-white/10"
-                    data-url="https://calendly.com/youthhackkc/tutoring-session"
+                    data-url="https://calendly.com/youthhackkc/tutoring-consultation"
                     style={{ minWidth: "320px", height: "700px" }}
                     ></div>
                 </div>
-                <div className="flex justify-center mt-4">
+                <div className="flex justify-center mt-4 text-center">
                     <a
-                        href="https://calendly.com/youthhackkc/tutoring-session"
+                        href="https://calendly.com/youthhackkc/tutoring-consultation"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-5 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition w-1/2 text-center"
+                        className="px-5 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition w-1/3 text-center mx-4"
                     >
                         Open Tutoring Registration
+                    </a>
+                    <a
+                        href="https://discord.gg/QNzSANBmJ7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-5 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition w-1/3 text-center mx-4"
+                    >
+                        Join Tutoring Discord
                     </a>
                 </div>
             </div>
