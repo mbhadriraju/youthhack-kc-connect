@@ -36,7 +36,7 @@ const Opportunities = () => {
                 <Card className="bg-card/50 backdrop-blur-sm border-white/10 overflow-hidden flex flex-col hover:border-primary/50 transition-all duration-300 hover:shadow-glow group animate-slide-up" style={{ animationDelay: '0.2s' }}>
                     <div className="aspect-video relative overflow-hidden">
                         <img
-                            src="../assets/Hackathon 1.png"
+                            src="/Hackathon 1.png"
                             alt="YouthHackKC W26"
                             className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                         />
