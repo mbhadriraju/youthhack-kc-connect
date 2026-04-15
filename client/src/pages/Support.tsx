@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Handshake, Mail, CheckCircle2, Loader2, Link } from "lucide-react";
+import { Heart, Handshake, Mail, CheckCircle2, Loader2, Download } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const Support = () => {
@@ -54,6 +54,15 @@ const Support = () => {
             setIsLoading(false);
         }
     };
+
+    const downloadFile = () => {
+        const link = document.createElement('a');
+        link.href = "public/YouthHackKC Sponsorship Packet.pdf";
+        link.download = "YouthHackKC Sponsorship Packet.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
 
     return (
         <div className="container mx-auto px-6 py-12 space-y-20">
@@ -141,7 +150,7 @@ const Support = () => {
                             We rely on the support of sponsors to keep our events free and accessible for all students. Reach out to discuss sponsorship opportunities.
                         </p>
 
-                        <form className="space-y-4" onSubmit={handleSubmit}>
+                        <form className="space-y-4" onSubmit={handleSubmit} enctype="multipart/form-data">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium leading-none">Name</label>
@@ -197,7 +206,7 @@ const Support = () => {
                                     className="min-h-[100px] bg-background/50 border-white/10"
                                 />
                             </div>
-                            <Button type="submit" disabled={isLoading} className="w-full bg-accent hover:bg-accent/90 text-white font-bold">
+                            <Button type="submit" disabled={isLoading} className="w-full bg-accent hover:bg-accent/90 text-white">
                                 {isLoading ? (
                                     <>
                                         <Loader2 className="w-4 h-4 mr-2 animate-spin" />
@@ -209,6 +218,10 @@ const Support = () => {
                                         Send Sponsorship Request
                                     </>
                                 )}
+                            </Button>
+                            <Button onClick={downloadFile} className="w-full bg-muted hover:bg-muted/90 text-white">
+                                <Download />
+                                Download Sponsorship Packet
                             </Button>
                         </form>
                     </CardContent>

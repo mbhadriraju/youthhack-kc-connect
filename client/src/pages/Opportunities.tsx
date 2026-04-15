@@ -151,14 +151,6 @@ const Opportunities = () => {
                     >
                         Open Tutoring Registration
                     </a>
-                    <a
-                        href="https://discord.gg/QNzSANBmJ7"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-5 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition w-1/3 text-center mx-4"
-                    >
-                        Join Tutoring Discord
-                    </a>
                 </div>
             </div>
         </div>
