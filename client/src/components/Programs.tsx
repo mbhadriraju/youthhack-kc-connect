@@ -30,9 +30,6 @@ const Programs = () => {
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-
       <div className="container mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold font-heading">

@@ -1,24 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Code2, Users, Lightbulb, ArrowRight } from "lucide-react";
+import React from "react";
 
 const Hero = () => {
+  const textParts = "Kansas City's CS Nonprofit, for K-12 students".split(",").map(part => part.trim());
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-40 right-20 w-32 h-32 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
 
           <div className="space-y-4">
-            <h1 className="text-6xl md:text-8xl font-heading font-bold tracking-tight">
+            <h1 className="text-6xl md:text-8xl font-heading font-bold tracking-tight" id="title">
               <span className="bg-primary bg-clip-text text-transparent block mb-2">YouthHackKC</span>
             </h1>
-            <h2 className="text-3xl md:text-5xl font-heading font-medium text-foreground/90">
-              Kansas City’s CS Nonprofit for K-12 students
+            <h2 className="text-3xl md:text-5xl font-heading font-medium text-white" id="subtitle">
+              Kansas City's CS Nonprofit, for K-12 students
             </h2>
           </div>
 
