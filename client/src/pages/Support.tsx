@@ -219,9 +219,15 @@ const Support = () => {
                                     </>
                                 )}
                             </Button>
-                            <Button onClick={downloadFile} className="w-full bg-muted hover:bg-muted/90 text-white">
-                                <Download />
-                                Download Sponsorship Packet
+                            <Button
+                                asChild
+                                className="mt-3 w-full bg-muted hover:bg-muted/90 text-white">
+                                <a
+                                    href="https://canva.link/ucgrp21ykasp8os"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Open Sponsorship Packet
+                                </a>
                             </Button>
                         </form>
                     </CardContent>

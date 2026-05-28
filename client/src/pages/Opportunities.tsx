@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Calendar, MapPin, Trophy, Users, Star, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
@@ -27,7 +28,7 @@ const Opportunities = () => {
                     Opportunities & <span className="bg-primary bg-clip-text text-transparent">Events</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-body">
-                    Join us for hackathons, workshops, and personalized tutoring sessions.
+                    Hackathons, workshops, and tutoring sessions.
                 </p>
             </div>
 
@@ -96,19 +97,19 @@ const Opportunities = () => {
                             </div>
                         </div>
                         <CardHeader>
-                            <CardTitle className="text-2xl font-heading">YouthHackKC X26</CardTitle>
+                            <CardTitle className="text-2xl font-heading">YouthHackKC S26</CardTitle>
                             <CardDescription className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" /> May 2026
+                                <Calendar className="w-4 h-4" /> Summer 2026
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="space-y-4 flex-grow">
                             <p className="text-muted-foreground text-sm font-body">
-                                Our biggest event yet! Featuring bigger prizes, industry judges, and hands-on workshops.
+                                Our biggest event yet! Featuring prizes, free food, and investor + engineer judging panel.
                             </p>
                             <div className="space-y-2">
                                 <div className="flex items-center gap-2 text-sm text-primary-glow font-medium">
                                     <Trophy className="w-4 h-4" />
-                                    <span>&gt;$500 in Prizes</span>
+                                    <span>&gt;$1000 in Prizes</span>
                                 </div>
                                 <div className="flex items-center gap-2 text-sm text-foreground/80">
                                     <Star className="w-4 h-4" />
@@ -116,11 +117,15 @@ const Opportunities = () => {
                                 </div>
                             </div>
                         </CardContent>
-                        {/* <CardFooter>
-                            <Button variant="default" className="w-full font-bold">
-                                Stay Tuned
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSdVWB47-iRglZdsLYqZihl2gra4Z4TZfKVvQKH0byL70CfArg/viewform"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full p-4 py-6">
+                            <Button className="w-full group-hover:text-white transition-colors">
+                                Register for Hackathon
                             </Button>
-                        </CardFooter> */}
+                        </a>
                     </div>
                 </Card>
             </div>

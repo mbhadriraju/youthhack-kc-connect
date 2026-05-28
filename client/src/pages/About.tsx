@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Brain, Rocket, Trophy, Briefcase, GraduationCap } from "lucide-react";
+import { Code, Brain, Rocket, Trophy, Briefcase, GraduationCap, Earth } from "lucide-react";
 
 const About = () => {
     return (
@@ -45,7 +45,7 @@ const About = () => {
                             <div className="space-y-3">
                                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                                     <Trophy className="w-4 h-4 text-accent" />
-                                    <span>KU High School Design Competition & USACO</span>
+                                    <span>HackKU & USACO</span>
                                 </div>
                                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                                     <Brain className="w-4 h-4 text-accent" />
@@ -82,8 +82,8 @@ const About = () => {
                                     <span>KU High School Design Competition</span>
                                 </div>
                                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                                    <GraduationCap className="w-4 h-4 text-accent" />
-                                    <span>Science Olympiad Member</span>
+                                    <Earth className="w-4 h-4 text-accent" />
+                                    <span>NASA Intern</span>
                                 </div>
                                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                                     <Rocket className="w-4 h-4 text-accent" />
