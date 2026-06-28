@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Opportunities from "./pages/Opportunities";
+import HackathonS26 from "./pages/HackathonS26";
 import Support from "./pages/Support";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/opportunities" element={<Opportunities />} />
+            <Route path="/hackathon-s26" element={<HackathonS26 />} />
             <Route path="/support" element={<Support />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/contact" element={<Contact />} />

@@ -22,6 +22,7 @@ const Header = () => {
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
         { name: "Opportunities", path: "/opportunities" },
+        { name: "Hackathon S26", path: "/hackathon-s26" },
         { name: "Support YHKC", path: "/support" },
         { name: "Donate", path: "/donate" },
         { name: "Contact", path: "/contact" },
